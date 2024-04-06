@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(19, 18, 18);
+    background-size: cover;
+    color: whitesmoke;
+    overflow-x: hidden; 
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 150vh;
+    height: 80vh;
+    border-radius: 10px;
+    background: rgb(34, 34, 34);
+  }
+  
+  .header {
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 1vh;
+  }
+  
+  .header span {
+    font-weight: 900;
+    font-size: 2vh;
+    word-break: break-all;
+  }
+  
+  #add {
+    font-size: 16px;
+    padding: 0.8vh;
+    border-radius: 5px;
+    border: none;
+    color: rgb(26, 26, 26);
+    background-color: rgb(226, 231, 226);
+
+  }
+  #add:hover{
+    background-color:rgb(83, 211, 100);
+    transition: 0.3s;
+    transition-delay: 0.5s;
+  }
+  .add-bt{
+    padding-top: 1.5vh;
+  }
+  
+  .divTable {
+    padding: 8px;
+    width: auto; 
+    height:inherit; 
+    overflow:auto;
+  }
+  
+  .divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke; 
+  }
+  
+  .divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray; 
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background: rgb(34, 34, 34);
+  }
+  
+  tr {
+    color: rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(238, 235, 235)!important;
+  }
+  
+  tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+  }
+  
+  thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  
+  tbody tr {
+    margin-bottom: 50px;
+  }
+  
+  thead tr th.acao {
+    width: 100px!important;
+    text-align: center;
+  }
+  
+  tbody tr td.acao {
+    text-align: center;
+  }
+  input{
+    margin-top: 1vw;
+    background-color: rgb(214, 214, 214);
+    border: none;
+    height: 5vh;
+    color: rgb(24, 24, 24);
+    padding-left: 10vh;
+    border-radius: 2vh;
+}
+
+
+.button-pesquisar{
+  margin-top: 1vw;
+  background-color: rgb(214, 214, 214);
+  border: none;
+  height: 5vh;
+  color: rgb(24, 24, 24);
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+.imagem{
+  padding-top: 2vh;
+  width: 20vh;
+  height: 20vh;
+}
+.img-fluid{
+  width: 15vh;
+  height: 15vh;
+  display: table;
+  display:table-row;
+}
+

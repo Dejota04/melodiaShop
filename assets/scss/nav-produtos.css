@@ -1,0 +1,34 @@
+nav.nav-produtos {
+  background: #48B978;
+  color: white;
+}
+nav.nav-produtos a {
+  color: white;
+}
+nav.nav-produtos ul.nav li {
+  position: relative;
+  padding: 10px 10px;
+}
+nav.nav-produtos ul.nav li svg {
+  font-size: 20px;
+  margin-right: 10px;
+}
+nav.nav-produtos ul.nav li:hover {
+  background: black;
+}
+nav.nav-produtos ul.nav li:hover ul.nav {
+  display: block;
+}
+nav.nav-produtos ul.nav li ul.nav {
+  z-index: 999;
+  display: none;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  background: #343A40;
+  border-top: solid #48B978 10px;
+  width: 100%;
+}
+nav.nav-produtos ul.nav li ul.nav li {
+  padding: 10px 25px;
+}/*# sourceMappingURL=nav-produtos.css.map */

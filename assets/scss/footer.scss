@@ -1,0 +1,26 @@
+footer{
+    background: #343A40;
+    padding: 25px 0;
+    color: white;
+    a{
+        color: white;
+        &:hover{
+            color: white;
+        }
+    }
+    h4{
+        font-size: 19px;
+        color: #48B978;
+    }
+
+    ul{
+        li{
+            li.ellipsis{
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

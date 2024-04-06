@@ -1,0 +1,25 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Roboto:wght@300;500;900&display=swap');
+
+
+//Config
+@import "./variaveis.scss";
+
+
+//Components
+@import "./header.scss";
+@import "./nav-produtos.scss"; 
+@import "./banners-promocionais-statico.scss";
+@import "./produtos.scss"; 
+@import "./footer.scss"; 
+@import "./responsive.scss"; 
+@import "./produtos-compra.scss"; 
+@import "./botao-compra.scss"; 
+
+
+
+//framework
+@import './bootstrap.scss';
+
+
+@import "./config.scss";

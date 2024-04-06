@@ -1,0 +1,134 @@
+header {
+  background: #1a1b1b;
+  padding: 25px;
+}
+header form input[type=text] {
+  background: white;
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  padding: 10px 20px;
+}
+header form button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 30px;
+}
+header ul li {
+  position: relative;
+}
+header ul li span.notificacao {
+  color: white;
+  background: #108340;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+header ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f5f6f7;
+}
+header ul li a svg {
+  font-size: 23px;
+}
+header ul li a:hover {
+  color: #37d378;
+}
+header .cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: rgb(29, 28, 28);
+  box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
+  transition: 0.3s;
+}
+header .cart.active {
+  right: 0;
+}
+header .cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+header .cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+header .cart-image {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 10px;
+}
+header .detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+header .cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+header .cart-price {
+  font-weight: 500;
+}
+header .cart-quantity {
+  border: 1px solid gray;
+  outline-color: #37d378;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+header .cart-remove {
+  font-size: 24px;
+  color: #37d378;
+  cursor: pointer;
+}
+header .total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid green;
+}
+header .total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+header .total-price {
+  margin-left: 0.5rem;
+}
+header .btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background: #37d378;
+  color: #1a1b1b;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+header .btn-buy:hover {
+  background: #108340;
+}
+header #close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: #f4f5f5;
+  cursor: pointer;
+}/*# sourceMappingURL=header.css.map */

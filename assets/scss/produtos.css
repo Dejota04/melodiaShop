@@ -1,0 +1,55 @@
+.resultados {
+  margin: 20px 0;
+}
+.resultados h1 {
+  color: black;
+  background: #48B978;
+}
+.resultados .resultados-container {
+  margin: 30px 0;
+}
+.resultados .resultados-container .resultados-itens {
+  color: #ffffff;
+}
+.resultados .resultados-container .resultados-itens h2 {
+  font-size: 19px;
+  margin: 10px 0 0;
+}
+.resultados .resultados-container .resultados-itens .resultados-stars {
+  font-size: 10px;
+}
+.resultados .resultados-container .resultados-itens .resultados-stars svg {
+  fill: #FFC107;
+}
+.resultados .resultados-container .resultados-itens .resultados-preco {
+  font-size: 16px;
+}
+
+.produtos {
+  margin: 30px 0;
+}
+.produtos h1 {
+  color: black;
+  background: #48B978;
+  border-radius: 100px;
+  border: none;
+}
+.produtos .produtos-container {
+  margin: 30px 0;
+}
+.produtos .produtos-container .produtos-itens {
+  color: #ffffff;
+}
+.produtos .produtos-container .produtos-itens h2 {
+  font-size: 19px;
+  margin: 10px 0 0;
+}
+.produtos .produtos-container .produtos-itens .produtos-stars {
+  font-size: 10px;
+}
+.produtos .produtos-container .produtos-itens .produtos-stars svg {
+  fill: #FFC107;
+}
+.produtos .produtos-container .produtos-itens .produtos-preco {
+  font-size: 16px;
+}/*# sourceMappingURL=produtos.css.map */
