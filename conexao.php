@@ -2,9 +2,9 @@
 
     $servidor = "Localhost";
     $usuario = "root";
-    $senha = "S102030d";
-    $banco = "db_puremusic";
+    $senha = "12345678";
+    $banco = "db_meloShop";
 
-    $cn = new PDO("mysql:host=$servidor;dbname=$banco", $usuario);
+    $cn = new PDO("mysql:host=$servidor;dbname=$banco", $usuario, $senha);
 
 ?>
