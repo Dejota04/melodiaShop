@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Roboto:wght@300;500;900&display=swap");
 header {
-  background: #1a1b1b;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);;
   padding: 25px;
 }
 header form input[type=text] {
@@ -142,11 +142,11 @@ header #close-cart {
 }
 
 nav.nav-produtos {
-  background: #48B978;
-  color: white;
+  background: #ffffff;
+  color: #103AC5;
 }
 nav.nav-produtos a {
-  color: white;
+  color: #103AC5;
 }
 nav.nav-produtos ul.nav li {
   position: relative;
@@ -157,7 +157,7 @@ nav.nav-produtos ul.nav li svg {
   margin-right: 10px;
 }
 nav.nav-produtos ul.nav li:hover {
-  background: black;
+  background: #83b1f6;
 }
 nav.nav-produtos ul.nav li:hover ul.nav {
   display: block;
@@ -168,8 +168,8 @@ nav.nav-produtos ul.nav li ul.nav {
   position: absolute;
   top: 44px;
   left: 0;
-  background: #343A40;
-  border-top: solid #48B978 10px;
+  background: white;
+  border-top: solid #a108e8;
   width: 100%;
 }
 nav.nav-produtos ul.nav li ul.nav li {
@@ -247,7 +247,7 @@ nav.nav-produtos ul.nav li ul.nav li {
   margin: 30px 0;
 }
 .produtos h1 {
-  color: black;
+  color: #ffffff;
   background-color: #48B978;
   border-radius: 100px;
   border: none;
@@ -256,7 +256,7 @@ nav.nav-produtos ul.nav li ul.nav li {
   margin: 30px 0;
 }
 .produtos .produtos-container .produtos-itens {
-  color: #ffffff;
+  color: #103AC5;
 }
 .produtos .produtos-container .produtos-itens h2 {
   font-size: 19px;
@@ -10387,8 +10387,8 @@ html {
 }
 
 body {
-  color: #ffffff;
-  background-color: #151515;
+  color: black;
+  background-color: white;
 }
 
 a {

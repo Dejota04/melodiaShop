@@ -184,14 +184,14 @@
             <!-- Imagens -->
             <article class="carousel-inner">
                 <figure class="carousel-item active">
-                    <img src="./assets/images/banner-promo-.gif" class="d-block w-100" alt="Banner Promocional">
+                    <img src="./assets/images/1.png" class="d-block w-100" alt="Banner Promocional">
                 </figure>
                 <figure class="carousel-item">
-                    <img src="./assets/images/banner-promo-guita.gif" class="d-block w-100" alt="Banner Promocional 2">
+                    <img src="./assets/images/2.png" class="d-block w-100" alt="Banner Promocional 2">
                 </figure>
                 <figure class="carousel-item">
-                    <img src="./assets/images/Banner para Site Promoção Black Friday Ofertas Imperdíveis Neon Azul e Preto (1).gif" class="d-block w-100"
-                        alt="Banner Promocional 3">
+                    <img src="./assets/images/3.png" class="d-block w-100"
+                        alt="Banner Promocional 3.png">
                 </figure>
             </article>
 
