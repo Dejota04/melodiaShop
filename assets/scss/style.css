@@ -55,7 +55,7 @@ header .cart {
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  background: rgb(29, 28, 28);
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
   box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
   transition: 0.3s;
 }
@@ -102,7 +102,7 @@ header .cart-quantity {
 }
 header .cart-remove {
   font-size: 24px;
-  color: #37d378;
+  color: red;
   cursor: pointer;
 }
 header .total {
@@ -221,13 +221,13 @@ nav.nav-produtos ul.nav li ul.nav li {
 }
 .resultados h1 {
   color: white;
-  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
 }
 .resultados .resultados-container {
   margin: 30px 0;
 }
 .resultados .resultados-container .resultados-itens {
-  color: #103AC5;
+  color: black;
 }
 .resultados .resultados-container .resultados-itens h2 {
   font-size: 19px;

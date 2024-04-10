@@ -1,5 +1,5 @@
-create database db_puremusic;
-use db_puremusic;
+create database db_melodiaShop;
+use db_melodiaShop;
 
 -- tabela de funcinario que esta interligada com cliente, produto, fornecedor, pagamento e  agenda
 create table funcionario(
@@ -41,6 +41,7 @@ quant_prod int not null,
 nome_prod varchar(50) not null,
 desc_prod varchar(80) not null,
 img_prod varchar(250) not null,
+cart_prod bit not null,
 id_func int,
   constraint foreign key (id_func) references funcionario(id_func)
 );
@@ -117,7 +118,7 @@ select * from produto where categoria like '{0}%';
 
 -- inserir funcionario
 insert into funcionario (nome_func, email_func, senha_func, CPF_func)
-				values ('carols','carols10gaymer@gmail.com', '102030', '12345612379');
+				values ('Daniel','daniel@gmail.com', '102030', '12345612379');
                 
 -- inserir cliente
 insert into cliente (nome_cli, email_cli, CPF_cli)
