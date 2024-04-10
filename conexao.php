@@ -5,6 +5,6 @@
     $senha = "12345678";
     $banco = "db_melodiaShop";
 
-    $cn = new PDO("mysql:host=$servidor;dbname=$banco", $usuario);
+    $cn = new PDO("mysql:host=$servidor;dbname=$banco", $usuario, $senha);
 
 ?>
