@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Roboto:wght@300;500;900&display=swap");
 header {
-  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
   padding: 25px;
 }
 header form input[type=text] {
@@ -12,8 +12,8 @@ header form input[type=text] {
   padding: 10px 20px;
 }
 h3 {
-  color: black;
-  background-color: #48B978;
+  color: white;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
   border-radius: 100px;
   border: none;
 }
@@ -220,14 +220,14 @@ nav.nav-produtos ul.nav li ul.nav li {
   margin: 20px 0;
 }
 .resultados h1 {
-  color: black;
-  background-color: #06e751;
+  color: white;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);;
 }
 .resultados .resultados-container {
   margin: 30px 0;
 }
 .resultados .resultados-container .resultados-itens {
-  color: #ffffff;
+  color: #103AC5;
 }
 .resultados .resultados-container .resultados-itens h2 {
   font-size: 19px;
@@ -248,7 +248,7 @@ nav.nav-produtos ul.nav li ul.nav li {
 }
 .produtos h1 {
   color: #ffffff;
-  background-color: #48B978;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
   border-radius: 100px;
   border: none;
 }
@@ -256,7 +256,7 @@ nav.nav-produtos ul.nav li ul.nav li {
   margin: 30px 0;
 }
 .produtos .produtos-container .produtos-itens {
-  color: #103AC5;
+  color: black;
 }
 .produtos .produtos-container .produtos-itens h2 {
   font-size: 19px;
@@ -273,7 +273,7 @@ nav.nav-produtos ul.nav li ul.nav li {
 }
 
 footer {
-  background: #343A40;
+  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
   padding: 25px 0;
   color: white;
 }
@@ -285,7 +285,7 @@ footer a:hover {
 }
 footer h4 {
   font-size: 19px;
-  color: #48B978;
+  color: white;
 }
 footer ul li li.ellipsis {
   width: 100%;
@@ -446,7 +446,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #103AC5;;
   text-align: left;
   background-color: #fff;
 }
