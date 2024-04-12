@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
 
-    <title>PURE. Music</title>
+    <title>MelodiaShop</title>
     <link rel="stylesheet" href="./assets/scss/style.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     
@@ -48,7 +48,7 @@
             <article class="row d-flex align-items-center">
                 <!-- "Logo" -->
                 <a href="index.php" class="col-md-2  d-flex justify-content-center">
-                    <img src="logo branca.png" class="img-fluid" alt="Logo Pure. Music">
+                    <img src="assets/images/Logo.png" class="img-fluid" alt="Logo MelodiaShop">
                 </a>
                 <!-- Buscar -->
                 <form action="index.php" class="col-md-7 d-flex align-items-center">
