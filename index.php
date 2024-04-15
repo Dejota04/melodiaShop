@@ -47,11 +47,11 @@
             <!-- Row - colunas -->
             <article class="row d-flex align-items-center">
                 <!-- "Logo" -->
-                <a href="index.php" class="col-md-2  d-flex justify-content-center">
-                    <img src="assets/images/Logo.png" class="img-fluid" alt="Logo MelodiaShop">
+                <a href="index.php" class="col-md-3  d-flex justify-content-center">
+                    <img src="assets/images/Logo branco total.png" class="img-fluid" alt="Logo MelodiaShop">
                 </a>
                 <!-- Buscar -->
-                <form action="index.php" class="col-md-7 d-flex align-items-center">
+                <form action="index.php" class="col-md-6 d-flex align-items-center">
                     <input type="text" name="txtbuscar" placeholder="Pesquisar Instrumentos aqui">
 
                     <button class="d-flex align-items-center">
