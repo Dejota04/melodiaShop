@@ -28,7 +28,7 @@ header ul li {
 }
 header ul li span.notificacao {
   color: white;
-  background: #108340;
+  background: black;
   position: absolute;
   top: -10px;
   left: 5px;
@@ -46,7 +46,7 @@ header ul li a svg {
   font-size: 23px;
 }
 header ul li a:hover {
-  color: #37d378;
+  color: black;
 }
 header .cart {
   position: fixed;
@@ -55,7 +55,7 @@ header .cart {
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
+  background: white;
   box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
   transition: 0.3s;
 }
@@ -102,7 +102,7 @@ header .cart-quantity {
 }
 header .cart-remove {
   font-size: 24px;
-  color: red;
+  color: black;
   cursor: pointer;
 }
 header .total {
@@ -130,14 +130,14 @@ header .btn-buy {
   cursor: pointer;
 }
 header .btn-buy:hover {
-  background: #108340;
+  background: black;
 }
 header #close-cart {
   position: absolute;
   top: 1rem;
   right: 0.8rem;
   font-size: 2rem;
-  color: #f4f5f5;
+  color: black;
   cursor: pointer;
 }
 
@@ -4619,7 +4619,7 @@ input[type=submit].btn-block {
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-  color: #495057;
+  color: black;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
