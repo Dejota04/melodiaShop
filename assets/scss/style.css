@@ -874,6 +874,10 @@ mark {
   height: auto;
 }
 
+.logo:hover {
+  filter: brightness(0);
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;

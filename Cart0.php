@@ -16,6 +16,7 @@
 	$exibe = $consulta->fetch(PDO::FETCH_ASSOC);
 
     $alterar = $cn->query("update produto set cart_prod = 0 where id_prod = $id_prod;");
+	
     header("location:index.php")
 
     

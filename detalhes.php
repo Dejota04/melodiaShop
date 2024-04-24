@@ -16,6 +16,7 @@
 <body>
 
 <?php
+    session_start();
     $id_prod = $_GET['id'];
     $n = 1;
     $detalhes = $cn ->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where id_prod ='$id_prod'"); 
@@ -81,7 +82,11 @@
                                     
                                 </select>
                             </div>
-                            <?php  if($exibeDetalhes['quant_prod'] > 0) { ?>
+                            <?php if(!isset($_SESSION['ID'])) { ?>
+                            <a href="login-funcionario.php">
+                            <button type="button" class="btn btn-success col-md-12">Fazer login</button>
+                            </a>
+                            <?php }  else if($exibeDetalhes['quant_prod'] > 0) { ?>
                             <a href="Cart1.php?id=<?php echo $exibeDetalhes['id_prod']; ?>">
                             <button type="button" class="btn btn-success col-md-12">Comprar</button>
                             </a>

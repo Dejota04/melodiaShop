@@ -6,7 +6,7 @@
 	
 	
 	$id_prod = $_GET['id'];
-
+	
 	
 	
 	include 'conexao.php';	

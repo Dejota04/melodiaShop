@@ -74,6 +74,22 @@ form :hover[type="submit"]{
     transition-delay: 0.5s;
     transition-duration: 0.7s;
 }
+
+.conta{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgb(14, 14, 14);
+    color: rgb(83, 211, 100);
+    font-size: 2vh;
+}
+
+.conta:hover{
+    background-color:rgb(83, 211, 100); 
+    color:rgb(14, 14, 14) ;
+    transition-delay: 0.5s;
+    transition-duration: 0.7s;
+}
 .voltar{
     color:rgb(206, 206, 206);
     padding-left: 2.3vh;

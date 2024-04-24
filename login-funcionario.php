@@ -40,13 +40,20 @@
             $Vemail = $_POST['txtemail'];
             $Vsenha = $_POST['txtsenha'];
 
-            $consulta = $cn->query("select id_func, email_func, senha_func from funcionario where email_func = '$Vemail' and senha_func = '$Vsenha'");
+            $consultaF = $cn->query("select id_func, email_func, senha_func from funcionario where email_func = '$Vemail' and senha_func = '$Vsenha'");
+            $consultaC = $cn->query("select id_cli, email_cli, senha_cli from cliente where email_cli = '$Vemail' and senha_cli = '$Vsenha'");
 
-            if($consulta-> rowCount() == 1)
+            if($consultaF-> rowCount() == 1)
             {
-                $exibeFunc = $consulta->fetch(PDO::FETCH_ASSOC);
+                $exibeFunc = $consultaF->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['ID'] = $exibeFunc['id_func'];
                 header('Location:selecionar.php');
+            }
+            else if($consultaC-> rowCount() == 1)
+            {
+                $exibeCli = $consultaC->fetch(PDO::FETCH_ASSOC);
+                $_SESSION['ID'] = $exibeCli['id_cli'];
+                header('location:index.php');
             }
             else if (isset($_POST['submit'])) {
                 echo "<script lang='JavaScript'> window.alert('Usuário Inexistente');</script>";
@@ -54,8 +61,9 @@
             
 
             ?>
-        
+        <a href="inserir-cliente.php" class="conta"><h4>Criar conta</h4></a> 
         <a href="index.php" class="voltar"><h4>Voltar</h4></a> 
+        
         
        
         

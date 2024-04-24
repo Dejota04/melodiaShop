@@ -34,7 +34,10 @@
     $consultaV2 = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'violão'");
     $consultaS = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'saxofone'");
     $consultaT = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'teclado'");
-    $consultaCart = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where cart_prod= 1");
+    $consultaCart = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where cart_prod= 1 ");
+    $idCli = $_SESSION['ID'] ;
+    $consultaCli = $cn->query("select nome_cli from cliente where id_cli = '$idCli'");
+    $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
 
     
 
@@ -48,7 +51,7 @@
             <article class="row d-flex align-items-center">
                 <!-- "Logo" -->
                 <a href="index.php" class="col-md-3  d-flex justify-content-center">
-                    <img src="assets/images/Logo branco total.png" class="img-fluid" alt="Logo MelodiaShop">
+                    <img src="assets/images/Logo branco total.png" class="img-fluid logo" alt="Logo MelodiaShop">
                 </a>
                 <!-- Buscar -->
                 <form action="index.php" class="col-md-6 d-flex align-items-center">
@@ -63,8 +66,14 @@
                     </button>
                 </form>
                 <!-- login funcionario -->
+                <?php 
+                
+               
+                ?>
+
                 <ul class="col-md-3 nav d-flex align-items-center justify-content-around">
                     <li class="nav-item">
+                        <?php if (empty($_SESSION['ID'])){?>
                         <a href="login-funcionario.php">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill"
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor">
@@ -72,6 +81,14 @@
                             </svg>
                             Entrar
                         </a>
+                        <?php } else{?>
+                            <a href="sair.php">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                            <?php echo $exibeCli['nome_cli'];?>
+                        </a><?php } ?>
                     </li>
 
                     <li class="nav-item">
@@ -91,6 +108,7 @@
                         <div class="cart" style="z-index:1000">
                                 <h2 class="cart-title">Seu Carrinho</h2>
                                 <div class="cart-content">
+                                <?php if (isset($_SESSION['ID'])){?>    
                                 <?php  while($exibe = $consultaCart->fetch(PDO::FETCH_ASSOC)){ ?>
                                     <div class="cart-box">
                                     <img src="./assets/images/<?php echo $exibe['img_prod'];?>" class="img-fluid cart-img"
@@ -107,9 +125,14 @@
                                     </div>   
                                     <?php } ?>                             
                                 </div>
+                                <?php } else{?>
+
+                            
+
+                                <?php } ?>
                                 <!--Fechar Carrinho-->
                                 <i class='bx bx-x' id="close-cart"></i>
-
+                           
 
                             </div>
                     </li>

@@ -17,10 +17,13 @@ create table cliente(
  nome_cli varchar(80) not null,
  email_cli varchar(50) not null,
  CPF_cli char(11) not null unique,
+ senha_cli varchar(50) not null,
  id_func int, 
  constraint foreign key (id_func) references funcionario(id_func)
 );
 
+alter table cliente modify column CPF_cli char(14) not null unique;
+select * from cliente;
 
 -- tabela fornecedor que tem funcionario como chave estrangeira e esta interligada com comissão
 create table fornecedor(
@@ -43,7 +46,9 @@ desc_prod varchar(80) not null,
 img_prod varchar(250) not null,
 cart_prod bit not null,
 id_func int,
-  constraint foreign key (id_func) references funcionario(id_func)
+id_cli int,
+  constraint foreign key (id_func) references funcionario(id_func),
+  constraint foreign key (id_cli) references cliente(id_cli)
 );
 
 
