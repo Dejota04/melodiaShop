@@ -59,8 +59,14 @@ header .cart {
   box-shadow: -2px 0 4px hsla(0deg, 4%, 15%, 0.1);
   transition: 0.3s;
 }
+
+/*muito foda, tá?*/
 header .cart.active {
   right: 0;
+  overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 500px;
+    max-height: 50vh;
 }
 header .cart-title {
   text-align: center;
@@ -955,6 +961,7 @@ pre code {
     max-width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -968,6 +975,13 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+
+@media (min-width: 480px) {
+  .carousel {
+    max-width: 1500px;
   }
 }
 .container-fluid,
@@ -6748,6 +6762,9 @@ a.close.disabled {
 
 .carousel {
   position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .carousel.pointer-event {
@@ -10407,3 +10424,4 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
   margin: 10px 0;
 }/*# sourceMappingURL=style.css.map */
+

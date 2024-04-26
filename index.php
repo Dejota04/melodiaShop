@@ -132,6 +132,9 @@
                                 <?php } ?>
                                 <!--Fechar Carrinho-->
                                 <i class='bx bx-x' id="close-cart"></i>
+                                <a href="Carrinho.php">
+                            <button type="button" class="btn btn-success col-md-12 finaliza">Finalizar compra</button>
+                            </a>
                            
 
                             </div>
