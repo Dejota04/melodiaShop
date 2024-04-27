@@ -38,6 +38,8 @@
     $idCli = $_SESSION['ID'] ;
     $consultaCli = $cn->query("select nome_cli from cliente where id_cli = '$idCli'");
     $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
+    $valorTotal = $cn->query("select Sum(valor) as valor from produto where cart_prod = 1");
+    $exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
 
     
 
@@ -132,8 +134,12 @@
                                 <?php } ?>
                                 <!--Fechar Carrinho-->
                                 <i class='bx bx-x' id="close-cart"></i>
-                                <a href="Carrinho.php">
-                            <button type="button" class="btn btn-success col-md-12 finaliza">Finalizar compra</button>
+                                <div class="total">
+                                    <div class="total-title">Total</div>
+                                    <div class="total-price">R$<?php echo $exibeTotal['valor'];?></div>
+                                </div>
+                            <a href="Carrinho.php">   
+                                <button type="button" class="btn btn-success col-md-12 finaliza">Finalizar compra</button>
                             </a>
                            
 
@@ -322,7 +328,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco price">
+                        <strong class="price produtos-preco ">
                         R$ <?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>
@@ -377,7 +383,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco">
+                        <strong class="price produtos-preco">
                         R$:<?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>
@@ -432,7 +438,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco">
+                        <strong class="price produtos-preco">
                         R$:<?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>
@@ -490,7 +496,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco">
+                        <strong class="price produtos-preco">
                         R$:<?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>
@@ -544,7 +550,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco">
+                        <strong class="price produtos-preco">
                         R$:<?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>
@@ -597,7 +603,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco">
+                        <strong class="price produtos-preco">
                         R$:<?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>
@@ -650,7 +656,7 @@
 
                         </div>
                         <!-- Preço do Produto -->
-                        <strong class="produtos-preco">
+                        <strong class="price produtos-preco">
                         R$:<?php echo number_format($exibe['valor'],2,',','.');?>
                         </strong>
                     </article>

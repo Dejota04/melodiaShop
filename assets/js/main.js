@@ -41,10 +41,11 @@ function updatetotal() {
         var cartBox = cartBoxes[i];
         var parentElement = cartBox.getElementsByClassName('cart-price')[0];
         var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
-        var price = parseFloat(priceElement.innerText.replace('$', ""));
+        var price = parseFloat(priceElement.innerText.replace('R$', ""));
         var quantity = quantityElement.value;
         total = total + (price + quantity);
 
         document.getElementsByClassName("total-price")[0].innerText = "$" + total;
     }
 }
+

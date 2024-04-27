@@ -115,7 +115,8 @@ header .total {
   display: flex;
   justify-content: flex-end;
   margin-top: 1.5rem;
-  border-top: 1px solid green;
+  border-top: 1px solid black;
+  color: #000;
 }
 header .total-title {
   font-size: 1rem;
@@ -123,6 +124,7 @@ header .total-title {
 }
 header .total-price {
   margin-left: 0.5rem;
+  
 }
 header .btn-buy {
   display: flex;
