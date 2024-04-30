@@ -24,13 +24,15 @@
        
     <div class="login">
         <div>
-            <img src="logo branca.png">
+            <img src="assets/images/logo 1.png">
         </div>
 
         <form name="form "method="post" action="login-funcionario.php">
             <input type="email" name="txtemail"  placeholder="E-mail..." autofocus required id="email"/>
             <input type="password" name="txtsenha"  placeholder="Senha..." required id="senha" />
             <input class="button" type="submit" name="submit" value="ENTRAR" />
+            <a href="inserir-cliente.php" id="conta"><h4>Criar conta</h4></a> 
+        <a href="index.php" class="voltar"><h4>Voltar</h4></a> 
         </form>
 
         <?php
@@ -61,8 +63,7 @@
             
 
             ?>
-        <a href="inserir-cliente.php" class="conta"><h4>Criar conta</h4></a> 
-        <a href="index.php" class="voltar"><h4>Voltar</h4></a> 
+        
         
         
        

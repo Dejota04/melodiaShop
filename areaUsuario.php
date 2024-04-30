@@ -156,7 +156,7 @@
 	<hr>
 
 	<div class=container>
-		<h6><b>Dados pessoais<b/></h6>
+		<h6><b>Dados pessoais<b></h6>
 	</div>
 	
 	

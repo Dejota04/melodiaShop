@@ -16,7 +16,7 @@ create table cliente(
  id_cli int auto_increment primary key,
  nome_cli varchar(80) not null,
  email_cli varchar(50) not null,
- CPF_cli char(11) not null unique,
+ CPF_cli char(14) not null unique,
  senha_cli varchar(50) not null,
  id_func int, 
  constraint foreign key (id_func) references funcionario(id_func)
