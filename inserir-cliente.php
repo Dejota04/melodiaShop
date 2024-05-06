@@ -27,7 +27,8 @@
 
 <?php
 	
-    
+    ini_set('display_errors', 0);
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
 	session_start();
 
 	include 'conexao.php';	
@@ -40,7 +41,7 @@
        
     <div class="login">
         <div class="titulo">
-            <p >Cadastrar Conta</p>
+            <p ><b>Cadastrar Conta</b></p>
         </div>
 
         <form method="post" action="inserir-cliente.php" >

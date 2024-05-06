@@ -1,19 +1,25 @@
 *{
     width: 0 auto;
     padding: 0;
-   box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
 }
 body{
+    background: url("assets/images/fundo cis.jpeg")
+    no-repeat center center;
     background-size: cover;
     height: 92vh;
     overflow: hidden;
-    background-color:#151515 ;
+    background-color:#151515 ;    
+    top: 0px;
+    left: 0px;
+    right: 0px;
 }
 .area-login{
     display: flex;
     justify-content:center;
     align-items: center;
-    height:100vh;
+    height:107vh;
     align-items: center;
     justify-content:center;
     background-color: rgba(17, 17, 17, 0.726);
@@ -22,9 +28,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(32, 30, 30);
+    background-color: rgb(255, 255, 255);
     width: 38vh;
-    height: 54vh;
+    height: 45vh;
     padding: 4vh;
     border-radius: 1vh;
 }
@@ -57,19 +63,19 @@ form [type="submit"]{
     display: block;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: rgb(14, 14, 14);
-    color: rgb(83, 211, 100);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 2vh;
 }
 form :hover[type="button"]{
-background-color:rgb(83, 211, 100); 
-color:rgb(14, 14, 14) ;
-transition-delay: 0.3s;
-transition-duration: 0.7s;
+    background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
+    color:rgb(255, 255, 255);
+    transition-delay: 0.1s;
+    transition-duration: 0.7s;
 }
 .voltar {
-    color:rgb(206, 206, 206);
-    padding-left: 1.3vh;
+    color:rgb(0, 0, 0); 
+    padding-top: 3vh;
     font-size: 3vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

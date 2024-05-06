@@ -38,7 +38,7 @@
        
     <div class="login">
         <div class="titulo">
-            <p >Cadastrar Funcionário</p>
+            <p><b>Cadastrar Funcionário</b></p>
         </div>
 
         <form method="post" action="inserir-funcionário.php" >

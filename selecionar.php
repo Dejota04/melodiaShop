@@ -29,14 +29,12 @@
        
     <div class="login">
         <div>
-            <img src="logo branca.png">
+        <img src="assets/images/logo 1.png">
         </div>
 
         <form>
             <a href="inserir-funcionário.php"> <input class="button" type="button" name="insert-func" value="Inserir funcionário"/></a>
-            <a href="inserir-cliente.php"></ahref><input class="button" type="button" name="Insert-cli" value="Inserir cliente"  /> </a>
             <a href="crud-busca.php"><input class="button" type="button" name="Insert-prod" value="Inserir/pesquisar produto"  /></a>
-            <a href="inserir-forn.php"><input class="button" type="button" name="insert-forn" value="Inserir fornecedor" /></a>
         </form>
         <a href="sair.php"><h4 class="voltar">Logoff</h4></a> 
     </div>

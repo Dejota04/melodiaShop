@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo-login.css"/>
+    <link rel="stylesheet" href="estilo-func.css"/>
     <script src="./assets/js/jquery.js"></script>
     <title>Login-Funcionário</title>
 </head>
@@ -31,8 +31,8 @@
             <input type="email" name="txtemail"  placeholder="E-mail..." autofocus required id="email"/>
             <input type="password" name="txtsenha"  placeholder="Senha..." required id="senha" />
             <input class="button" type="submit" name="submit" value="ENTRAR" />
-            <a href="inserir-cliente.php" id="conta"><h4>Criar conta</h4></a> 
-        <a href="index.php" class="voltar"><h4>Voltar</h4></a> 
+            <a href="inserir-cliente.php" id="conta">Criar conta</a> 
+            <a href="index.php" class="voltar"><h4>Voltar</h4></a> 
         </form>
 
         <?php
