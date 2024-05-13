@@ -11,10 +11,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(19, 18, 18);
+    background: url("assets/images/fundo cis.jpeg")
+    no-repeat center center;
     background-size: cover;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     overflow-x: hidden; 
+  }
+
+  .area-login{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.726);
   }
   
   button {
@@ -25,7 +35,7 @@
     width: 150vh;
     height: 80vh;
     border-radius: 10px;
-    background: rgb(34, 34, 34);
+    background-color: rgb(255, 255, 255);
   }
   
   .header {
@@ -52,9 +62,11 @@
 
   }
   #add:hover{
-    background-color:rgb(83, 211, 100);
-    transition: 0.3s;
+    transition: 0.2s;
     transition-delay: 0.5s;
+    background: linear-gradient(90deg,#83b1f6 0%,#0d38cf 36%, #a108e8 100%);
+    color: white;
+    
   }
   .add-bt{
     padding-top: 1.5vh;
@@ -85,11 +97,11 @@
   }
   
   thead {
-    background: rgb(34, 34, 34);
+    background: rgb(255, 255, 255);
   }
   
   tr {
-    color: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
     border-bottom: 1px solid rgb(238, 235, 235)!important;
   }
   

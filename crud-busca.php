@@ -15,6 +15,11 @@
 ini_set('display_errors', 0);
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 include 'conexao.php';
+session_start();
+if(empty($_SESSION['ID']))
+{
+  header("location:index.php");
+}
 $pesquisa = $_GET['txtbusca'];
     
 
@@ -22,7 +27,7 @@ $pesquisa = $_GET['txtbusca'];
    
 	?>
 
-
+<section class="area-login">
   <div class="container">
     <div class="header">
       <h1 class="titulo2">Cadastro de Produtos</h1>
@@ -74,7 +79,7 @@ $pesquisa = $_GET['txtbusca'];
 
 	
     </div>
-     
+</section>
 </body>
 
 </html>
