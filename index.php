@@ -143,7 +143,7 @@
                                 <button type="button" class="btn btn-success col-md-12 finaliza">Finalizar compra</button>
                             </a>
                             <?php } else{?>
-                                <h1> loga ai pra poder usar o carrinho, seu feio</h1>
+                                <p>É necessário <a href="login-funcionario.php" id="msg"><b>fazer login</b></a> para utilizar o carrinho</p>
                             <?php }?>
                            
 

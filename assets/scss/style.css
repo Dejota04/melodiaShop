@@ -42,6 +42,15 @@ header ul li a {
   font-weight: bold;
   color: #f5f6f7;
 }
+
+#msg{
+  color:rgb(0, 0, 0)
+}
+
+#msg:hover{
+  color:rgb(17, 14, 197)
+}
+
 header ul li a svg {
   font-size: 23px;
 }
