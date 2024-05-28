@@ -77,6 +77,13 @@ header .cart.active {
     max-height: 500px;
     max-height: 50vh;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 header .cart-title {
   text-align: center;
   font-size: 1.5rem;

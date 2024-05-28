@@ -18,7 +18,7 @@
 
 <?php 
      
-     ini_set('display_errors', 0);
+    ini_set('display_errors', 0);
     error_reporting(E_ERROR | E_WARNING | E_PARSE);
     include 'conexao.php';
     session_start();
@@ -42,7 +42,7 @@
     $exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
 
     
-
+  
     ?>
 
     <!-- Inicio Header -->
@@ -110,7 +110,7 @@
                         <div class="cart" style="z-index:1000">
                                 <h2 class="cart-title">Seu Carrinho</h2>
                                 <div class="cart-content">
-                                <?php if (isset($_SESSION['ID'])){?>    
+                                 
                                 <?php  while($exibe = $consultaCart->fetch(PDO::FETCH_ASSOC)){ ?>
                                     <div class="cart-box">
                                     <img src="./assets/images/<?php echo $exibe['img_prod'];?>" class="img-fluid cart-img"
@@ -127,24 +127,22 @@
                                     </div>   
                                     <?php } ?>                             
                                 </div>
-                                <?php } else{?>
+                              
 
                             
 
-                                <?php } ?>
+                               
                                 <!--Fechar Carrinho-->
                                 <i class='bx bx-x' id="close-cart"></i>
-                                <?php if (isset($_SESSION['ID'])){?> 
+                                
                                 <div class="total">
                                     <div class="total-title">Total</div>
                                     <div class="total-price">R$<?php echo $exibeTotal['valor'];?></div>
                                 </div>
-                            <a href="Carrinho.php">   
+                            <a href="carrinho.php">   
                                 <button type="button" class="btn btn-success col-md-12 finaliza">Finalizar compra</button>
                             </a>
-                            <?php } else{?>
-                                <p>É necessário <a href="login-funcionario.php" id="msg"><b>fazer login</b></a> para utilizar o carrinho</p>
-                            <?php }?>
+                            
                            
 
                             </div>
@@ -697,111 +695,16 @@
         
         
         
-
+        
         ?>
+        <ul><a href="#top">Voltar ao inicio</a></ul>
+        <script lang='JavaScript'>$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;</script>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="container-fluid">
-        <!-- Container -->
-        <section class="container">
-            <!-- Menus -->
-            <section class="row">
-                <!-- Atendimento -->
-                <article class="col-md-4">
-                    <h4>
-                        Atendimento
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">(11) 9 9999-9999</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="mailto:contato@loja.com.br">contato@loja.com.br</a>
-                        </li>
-                        <li class="nav-item">
-                            Horario de Atendimento on-line: Segunda à sexta da 9:00 as 19:00
-                        </li>
-
-                    </ul>
-                </article>
-                <!-- Fim Atendimento -->
-
-                <!-- Acesso Rápido -->
-                <article class="col-md-3">
-                    <h4>
-                        Acesso Rápido
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">Minha Conta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Meus Pedidos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Rastrear meu Pedido</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Troca e Devoluções</a>
-                        </li>
-                    </ul>
-                </article>
-                <!-- Fim Acesso Rápido -->
-
-                <!-- Institucional -->
-                <article class="col-md-3">
-                    <h4>
-                        Institucional
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">Sobre a Loja</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Politica e Privacidade</a>
-                        </li>
-                    </ul>
-                </article>
-                <!-- Fim Institucional -->
-
-                <!-- Mais Acessados-->
-                <article class="col-md-2">
-                    <h4>
-                        Mais Acessados
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">Guitarra Ibanez</a>
-                        </li>
-                        <li class="nav-item ellipsis">
-                            <a href="#">Guitarra Tagima</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Guitarra Special Tribute</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Guitarra Les Paul Vintage</a>
-                        </li>
-                    </ul>
-                </article>
-                <!-- Fim Mais Acessados -->
-
-            </section>
-            <!-- Fim Menus -->
-        </section>
-        <!-- Fim Container -->
-    </footer>
-    <!-- Fim Footer -->
-
-
-    <!-- Arquivos do Bootstrap -->
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/pooper.js"></script>
-    <script src="./assets/js/bootstrap.js"></script>
-</body>
+    <?php include 'footer.php' ?>
 
 
 
