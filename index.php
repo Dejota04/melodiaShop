@@ -84,7 +84,7 @@
                             Entrar
                         </a>
                         <?php } else{?>
-                            <a href="sair.php">
+                            <a href="areaCliente.php">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill"
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -704,7 +704,20 @@
 
     </main>
 
+
     <?php include 'footer.php' ?>
+
+
+    <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+<a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=11949081179&text=Ol%C3%A1,%20Gostaria%20de%20conhecer%20mais%20sobre%20a%20loja!">
+  <div class="rwb-tooltip">Fale conosco</div>
+  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+</a>
+
+
+
+</body>
+
 
 
 
