@@ -72,8 +72,8 @@
 						echo "<script lang='JavaScript'> window.alert('Essa conta já existe'); window.location.href='inserir-cliente.php';</script>";
 					} else if (isset($_POST['submit'])){
 
-						$inserirFunc = $cn->query("insert into cliente (nome_cli, email_cli, CPF_cli, senha_cli)
-						values ('$nome','$email', '$cpf', '$senha')");    
+						$inserirFunc = $cn->query("insert into cliente (nome_cli, email_cli, CPF_cli, senha_cli, tel_cli)
+						values ('$nome','$email', '$cpf', '$senha', '$telefone')");    
 						echo "<script lang='JavaScript'> window.alert('Conta cadastrada com sucesso!'); window.location.href='login-funcionario.php';</script>";
 					}
 ?>

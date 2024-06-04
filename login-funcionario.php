@@ -49,6 +49,7 @@
             {
                 $exibeFunc = $consultaF->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['ID'] = $exibeFunc['id_func'];
+                $idCli = $_SESSION['ID'] ;
                 header('Location:selecionar.php');
             }
             else if($consultaC-> rowCount() == 1)
