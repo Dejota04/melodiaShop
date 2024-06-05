@@ -112,7 +112,7 @@
     
 
 
-<a href="excluir.php?id=<?php echo $exibe['id_prod']; ?>">
+<a href="excluir2.php?id=<?php echo $exibe['id_prod']; ?>">
     <button type="submit" class="btn btn-success col-md-6">Excluir</button>
     <span class="glyphicon glyphicon-info-sign"> </span>
     

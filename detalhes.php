@@ -82,11 +82,7 @@
                                     
                                 </select>
                             </div>
-                            <?php if(!isset($_SESSION['ID'])) { ?>
-                            <a href="login-funcionario.php">
-                            <button type="button" class="btn btn-success col-md-12">Fazer login</button>
-                            </a>
-                            <?php }  else if($exibeDetalhes['quant_prod'] > 0) { ?>
+                            <?php if($exibeDetalhes['quant_prod'] > 0) { ?>
                             <a href="Cart1.php?id=<?php echo $exibeDetalhes['id_prod']; ?>">
                             <button type="button" class="btn btn-success col-md-12">Comprar</button>
                             </a>

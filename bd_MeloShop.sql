@@ -1,5 +1,6 @@
 create database db_melodiaShop;
 use db_melodiaShop;
+drop database db_melodiashop;
 
 -- tabela de funcinario que esta interligada com cliente, produto, fornecedor, pagamento e  agenda
 create table funcionario(
@@ -16,14 +17,13 @@ create table cliente(
  id_cli int auto_increment primary key,
  nome_cli varchar(80) not null,
  email_cli varchar(50) not null,
+ tel_cli varchar(14) not null,
  CPF_cli char(14) not null unique,
  senha_cli varchar(50) not null,
  id_func int, 
  constraint foreign key (id_func) references funcionario(id_func)
 );
 
-alter table cliente modify column CPF_cli char(14) not null unique;
-select * from cliente;
 
 -- tabela fornecedor que tem funcionario como chave estrangeira e esta interligada com comissão
 create table fornecedor(
@@ -73,13 +73,17 @@ id_func int primary key,
 -- tabela venda que tem produto e cliente como chave estrangeira, alem de ser um relacionamento entre cliente e produto
 create table venda (
 id_venda int auto_increment primary key,
-valor_venda int not null,
+no_ticket varchar(13) not null,
+quant_prod int not null,
+vl_item decimal(10,2) not null,
+valor_venda decimal(10,2) generated always as ((quant_prod * vl_item)) virtual,
 quant_venda int not null,
+dt_venda date not null,
 id_cli int,
 id_prod int,
   constraint foreign key (id_cli) references cliente(id_cli),
   constraint foreign key (id_prod) references produto(id_prod)
-  );
+);
 
 -- comissão é o relacionamento entre o fornecedor e o produto e tem como chave estrangeira o produto e o fornecedor  
 create table comissao(
@@ -126,8 +130,9 @@ insert into funcionario (nome_func, email_func, senha_func, CPF_func)
 				values ('Daniel','daniel@gmail.com', '102030', '12345612379');
                 
 -- inserir cliente
-insert into cliente (nome_cli, email_cli, CPF_cli)
-				values ('hany','hany@gmail','11231456789');
+insert into cliente (nome_cli, senha_cli, email_cli, CPF_cli, tel_cli)
+				values ('Daniel Batista', '102030','dani@gmail','11231456789', '(11)94908-1179');
+                
                 
 -- inserir fornecedor
 insert into fornecedor (nome_forn, email_forn, CNPJ_forn)
@@ -167,7 +172,3 @@ insert into tel_forn ( tel_forn, id_forn)
                 
 -- atualizar dados de um atributo de uma tabela
 update produto set valor = 3000 where id_prod = 2;
-	
-	 
-
-

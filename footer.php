@@ -19,6 +19,9 @@
                         <li class="nav-item">
                             Horario de Atendimento on-line: Segunda à sexta da 9:00 as 19:00
                         </li>
+                        <li class="nav-item">
+                        <a href="https://www.instagram.com/me_lodia_shop?igsh=d3Rndmx2N2p5NnRq" target="_blank">Nosso Instagram</a>
+                        </li>
 
                     </ul>
                 </article>
@@ -97,4 +100,11 @@
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/pooper.js"></script>
     <script src="./assets/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+<a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=11949081179&text=Ol%C3%A1,%20Gostaria%20de%20conhecer%20mais%20sobre%20a%20loja!">
+  <div class="rwb-tooltip">Fale conosco</div>
+  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+</a>
+
 </body>

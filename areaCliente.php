@@ -14,37 +14,29 @@
             
 </head>
 
-<body>
-
-<?php 
-     
+<body>	
+	
+	<?php
     ini_set('display_errors', 0);
     error_reporting(E_ERROR | E_WARNING | E_PARSE);
     include 'conexao.php';
-    session_start();
+    session_start(); // iniciando sessão
+	
+	// verificando se usuário está logado
+	if(empty($_SESSION['ID'])){
+		
+		header('location:login-funcionario.php'); // enviando para formlogon.php
+		
+	}
 
- 
-
-    //consulta de produtos por categoria
-
-    $consultaG = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'guitarra'");
-    $consultaP = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'piano'");
-    $consultaB = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'bateria'");
-    $consultaV = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'violino'");
-    $consultaV2 = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'violão'");
-    $consultaS = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'saxofone'");
-    $consultaT = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where categoria = 'teclado'");
     $consultaCart = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where cart_prod= 1 ");
     $idCli = $_SESSION['ID'] ;
     $consultaCli = $cn->query("select nome_cli, email_cli, tel_cli from cliente where id_cli = '$idCli'");
     $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
-    $valorTotal = $cn->query("select Sum(valor) as valor from produto where cart_prod = 1");
-    $exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
-    
-    
+   
 
-    
 
+	
     ?>
 
     <!-- Inicio Header -->
@@ -82,7 +74,7 @@
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                             </svg>
-                            Sair
+                            Logoff
                         </a> 
                     <li class="nav-item">
                     <a href="#" id="cart-icon">
@@ -202,21 +194,24 @@
                 <section class="container produtos">
                     <h2 class="text-center"><b>Minha conta</b></h2><br><br> 
                     <h4><b>Dados</b></h4><hr>
-                    <article>
-                    
-                    <p><b>Dados Pessoais</b></p>
-                    <a href="#"><p><b>Editar</b></p></a>
-                    <?php echo $exibeCli['nome_cli'];?><br>
-                    <?php echo $exibeCli['email_cli'];?><br>
-                    <?php echo $exibeCli['tel_cli'];?>
+                        <article class="dados">
+                            <nav class="row d-flex align-items-center justify-content-between">
+                                <p class="col-md-2  d-flex "><b>Dados Pessoais</b></p>
+                                <a class="col-md-2  d-flex " href="#"><p><b>Editar</b></p></a>
+                            </nav>
+                            <hr>
 
-                            
-                    
-                    </article>
+                            <p><b>Nome:</b> <?php echo $exibeCli['nome_cli'];?></p>
+                            <p><b>Email:</b> <?php echo $exibeCli['email_cli'];?></p>
+                            <p><b>Telefone:</b> <?php echo $exibeCli['tel_cli'];?></p>
+
+                                
+                        
+                        </article>
 
                 </section>
 
-
+    <?php include 'footer.php' ?>
 
 </body>
 
