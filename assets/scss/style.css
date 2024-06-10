@@ -10448,3 +10448,11 @@ h1, h2, h3, h4, h5 {
   border-radius: 10px;
   padding: 25px;
 }
+
+#botaoCarrinho{
+  padding: 3%;
+}
+
+.container-fluid-cart{
+  border: 20%;
+}

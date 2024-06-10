@@ -195,7 +195,7 @@
                     <h2 class="text-center"><b>Minha conta</b></h2><br><br> 
                     <h4><b>Dados</b></h4><hr>
                         <article class="dados">
-                            <nav class="row d-flex align-items-center justify-content-between">
+                            <nav class="row d-flex justify-content-between">
                                 <p class="col-md-2  d-flex "><b>Dados Pessoais</b></p>
                                 <a class="col-md-2  d-flex " href="#"><p><b>Editar</b></p></a>
                             </nav>

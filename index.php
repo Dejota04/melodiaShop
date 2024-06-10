@@ -697,7 +697,7 @@
         
         
         ?>
-        <ul><a href="#top">Voltar ao inicio</a></ul>
+        <ul class="text-center justify-content-around"><a href="#top">Voltar ao inicio</a></ul>
         <script lang='JavaScript'>$("a[href='#top']").click(function() {
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;</script>
