@@ -77,12 +77,9 @@ no_ticket varchar(13) not null,
 quant_prod int not null,
 vl_item decimal(10,2) not null,
 valor_venda decimal(10,2) generated always as ((quant_prod * vl_item)) virtual,
-quant_venda int not null,
 dt_venda date not null,
-id_cli int,
-id_prod int,
-  constraint foreign key (id_cli) references cliente(id_cli),
-  constraint foreign key (id_prod) references produto(id_prod)
+id_cli int(11) not null,
+id_prod int(11) not null
 );
 
 -- comissão é o relacionamento entre o fornecedor e o produto e tem como chave estrangeira o produto e o fornecedor  
@@ -131,7 +128,7 @@ insert into funcionario (nome_func, email_func, senha_func, CPF_func)
                 
 -- inserir cliente
 insert into cliente (nome_cli, senha_cli, email_cli, CPF_cli, tel_cli)
-				values ('Daniel Batista', '102030','dani@gmail','11231456789', '(11)94908-1179');
+				values ('Daniel Batista', '102030','dssantana04@gmail','11231456789', '(11)94908-1179');
                 
                 
 -- inserir fornecedor

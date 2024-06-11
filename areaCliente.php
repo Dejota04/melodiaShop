@@ -211,6 +211,22 @@
 
                 </section>
 
+                <div class="container-fluid">
+	
+	
+	<div class="row" style="margin-top: 15px;">
+		
+		<div class="col-sm-1 col-sm-offset-1"> Data </div>
+		<div class="col-sm-2"> Ticket </div>
+		<div class="col-sm-5"> Produto </div>
+		<div class="col-sm-1"> Quantidade </div>
+		<div class="col-sm-2"> Preço </div>
+				
+	</div>		
+	
+	
+</div>
+
     <?php include 'footer.php' ?>
 
 </body>

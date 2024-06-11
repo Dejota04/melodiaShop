@@ -136,11 +136,14 @@
             <button type="button" class="btn btn-success col-md-3 finaliza">Continuar comprando</button>
         </a>
 
-        <a href=".php">   
+        <a href="finalizarCompra.php">   
             <button type="button" class="btn btn-success col-md-3 finaliza">Finalizar compra</button>
         </a>
         
     </div>	
+
+
+
 	
 	<!-- Footer -->
 <footer class="container-fluid-cart">
