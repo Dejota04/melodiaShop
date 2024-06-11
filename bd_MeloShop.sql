@@ -74,13 +74,29 @@ id_func int primary key,
 create table venda (
 id_venda int auto_increment primary key,
 no_ticket varchar(13) not null,
-quant_prod int not null,
-vl_item decimal(10,2) not null,
-valor_venda decimal(10,2) generated always as ((quant_prod * vl_item)) virtual,
+qt_prod int not null,
+vl_prod decimal(10,2) not null,
+valor_venda decimal(10,2) generated always as ((qt_prod * vl_prod)) virtual,
 dt_venda date not null,
 id_cli int(11) not null,
 id_prod int(11) not null
 );
+
+insert into venda(no_ticket, id_cli, id_prod, qt_prod, vl_prod, dt_venda)
+values(111222333, 2, 2, 2, 52.20, '2024-10-02');
+
+
+select * from venda;
+
+select 
+		venda.no_ticket,
+        venda.id_cli,
+        venda.dt_venda,
+        venda.qt_prod,
+        venda.valor_venda,
+        produto.nome_prod
+from venda inner join produto 
+on venda.id_prod = produto.id_prod;
 
 -- comissão é o relacionamento entre o fornecedor e o produto e tem como chave estrangeira o produto e o fornecedor  
 create table comissao(
