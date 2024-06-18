@@ -38,8 +38,9 @@
     $idCli = $_SESSION['ID'] ;
     $consultaCli = $cn->query("select nome_cli from cliente where id_cli = '$idCli'");
     $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
-    $valorTotal = $cn->query("select Sum(valor) as valor from produto where cart_prod = 1");
+    $valorTotal = $cn->query("select Sum(valor * quant_prod) as valor from produto where cart_prod = 1");
     $exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
+    $n = 1;
 
     
   
@@ -118,6 +119,7 @@
                             <div class="detail-box">
                                 <div class="cart-product-title"><?php echo $exibe['nome_prod'];?></div>
                                 <div class="cart-price">R$<?php echo $exibe['valor'];?></div>
+                                <div class="cart-price-title">Quantidade: <?php echo $exibe['quant_prod'];?></div>
                             </div>
                            
                             <!--Remover-->

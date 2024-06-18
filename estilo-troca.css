@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+header{
+    background:url("assets/images/fundo cis.jpeg");
+    min-height: 15vh;
+}
+
+footer{
+    background:url("assets/images/fundo cis.jpeg");
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 15vh;    
+    justify-content: space-between;
+    padding-top: 3vh;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.logo{
+    text-align: center;
+}
+.img{
+    height: 13vh;    
+}
+
+.titulo{
+    text-align: center;
+}
+
+.espaco{
+    padding: 3vh;
+}
+
+.text{
+    padding: 7vh;
+    text-indent: 3vh;
+    text-align: center;
+    max-width:fit-content;
+}
+
+h3{
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .logo:hover {
+    filter: brightness(0);
+  }

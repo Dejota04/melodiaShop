@@ -10453,6 +10453,17 @@ h1, h2, h3, h4, h5 {
   padding: 3%;
 }
 
+
 .container-fluid-cart{
   border: 20%;
+}
+
+.fim{
+  padding: 5%;
+  margin-left: 29%;
+}
+
+.botao{
+  margin-left: 36%;
+  
 }

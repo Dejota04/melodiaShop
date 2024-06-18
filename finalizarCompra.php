@@ -1,24 +1,28 @@
 
 
 <?php
+ini_set('display_errors', 0);
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 // iniciando a sessão, pois precisamos pegar o cd do usuario logado para salvar na tabela de vendas no campo cd_cliiente
 session_start();  
 
 include 'conexao.php';
-
+$consultaCart = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where cart_prod= 1 ");
+$valorTotal = $cn->query("select Sum(valor * quant_prod) as valor from produto where cart_prod = 1");
+$exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
 
 $data = date('Y-m-d');  // variavel que vai pegar a data do dia (ano mes dia -padrão do mysql)
 $ticket = uniqid();  // gerando um ticket com função uniqid(); 	gera um id unico    
 $cd_user = $_SESSION['ID'];  //recebendo o codigo do usuário logado, nesta pagina o usuario ja esta logado pois, em do carrinho de compra
 
 //// criando um loop para sessão carrinho q recebe o $cd e a quantidade
-foreach ($_SESSION['carrinho'] as $cd => $qnt)  {
-    $consulta = $conexao->query("SELECT valor FROM produto WHERE id_prod='$cd'");
-    $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
-    $preco = $exibe['valor'];
+while($exibe = $consultaCart->fetch(PDO::FETCH_ASSOC))  {
+    $cd = $exibe['id_prod'];
+    $qnt = $exibe['quant_prod'];
+    $preco = $exibeTotal['valor'];
     
 	
-	$inserir = $conexao->query("INSERT into venda(no_ticket, id_cli, id_prod, qt_prod, vl_prod, dt_venda)  VALUES
+	$inserir = $cn->query("INSERT into venda(no_ticket, id_cli, id_prod, qt_prod, vl_prod, dt_venda)  VALUES
 	('$ticket','$cd_user','$cd','$qnt','$preco','$data')");
 	
 }
@@ -132,125 +136,11 @@ foreach ($_SESSION['carrinho'] as $cd => $qnt)  {
 
 
     <?php include 'fim.php'; ?>
-
-    <div class="text-center justify-content-around" id="botaoCarrinho">
-        <a href="index.php">   
-            <button type="button" class="btn btn-success col-md-3 finaliza">Voltar</button>
-        </a>
-    </div>
-
-	
-	<!-- Footer -->
-<footer class="container-fluid-cart">
-        <!-- Container -->
-        <section class="container">
-            <!-- Menus -->
-            <section class="row">
-                <!-- Atendimento -->
-                <article class="col-md-4">
-                    <h4>
-                        Atendimento
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">(11) 9 9999-9999</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="mailto:contato@loja.com.br">contato@loja.com.br</a>
-                        </li>
-                        <li class="nav-item">
-                            Horario de Atendimento on-line: Segunda à sexta da 9:00 as 19:00
-                        </li>
-                        <li class="nav-item">
-                        <a href="https://www.instagram.com/me_lodia_shop?igsh=d3Rndmx2N2p5NnRq" target="_blank">Nosso Instagram</a>
-                        </li>
-
-                    </ul>
-                </article>
-                <!-- Fim Atendimento -->
-
-                <!-- Acesso Rápido -->
-                <article class="col-md-3">
-                    <h4>
-                        Acesso Rápido
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">Minha Conta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Meus Pedidos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Rastrear meu Pedido</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Troca e Devoluções</a>
-                        </li>
-                    </ul>
-                </article>
-                <!-- Fim Acesso Rápido -->
-
-                <!-- Institucional -->
-                <article class="col-md-3">
-                    <h4>
-                        Institucional
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">Sobre a Loja</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Politica e Privacidade</a>
-                        </li>
-                    </ul>
-                </article>
-                <!-- Fim Institucional -->
-
-                <!-- Mais Acessados-->
-                <article class="col-md-2">
-                    <h4>
-                        Mais Acessados
-                    </h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#">Guitarra Ibanez</a>
-                        </li>
-                        <li class="nav-item ellipsis">
-                            <a href="#">Guitarra Tagima</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Guitarra Special Tribute</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Guitarra Les Paul Vintage</a>
-                        </li>
-                    </ul>
-                </article>
-                <!-- Fim Mais Acessados -->
-
-            </section>
-            <!-- Fim Menus -->
-        </section>
-        <!-- Fim Container -->
-    </footer>
-    <!-- Fim Footer -->
+        <br><br>
+    <?php include 'footer.php'; ?>
 
 
-    <!-- Arquivos do Bootstrap -->
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/pooper.js"></script>
-    <script src="./assets/js/bootstrap.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
-<a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=11949081179&text=Ol%C3%A1,%20Gostaria%20de%20conhecer%20mais%20sobre%20a%20loja!">
-  <div class="rwb-tooltip">Fale conosco</div>
-  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
-</a>
-
-</body>
-
-	
+   
 </body>
 </html>

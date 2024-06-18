@@ -6,6 +6,7 @@
 	
 	
 	$id_prod = $_GET['id'];
+
 	
 	
 	

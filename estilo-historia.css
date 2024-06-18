@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+
+header{
+    max-height: 15vh;    
+    background:url("assets/images/fundo cis.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+
+footer{
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 15vh;
+    justify-content: space-between;
+    padding-top: 3vh;
+    background:url("assets/images/fundo cis.jpeg") no-repeat center;
+    background-size: cover;
+}
+
+li{
+    list-style-type: none;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-emphasis-color: #fff;
+}
+
+h1{
+    padding-top: 3vh;
+    padding-left: 25vh;
+}
+
+ /* -- classes de imagens -- */
+.logo{
+    text-align: center;
+}
+.img{
+
+    height: 13vh;
+}
+
+.menina{
+    text-align: right;
+    padding-right: 25vh;
+}
+
+.slogan{
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.loja{
+    text-align: right;
+    padding-right: 25vh;
+}
+/* -- fim das classes de imagens -- */
+
+
+ul{
+    /* max-width: 70vh; */
+    padding-left: 25vh;
+    padding-right: 27vh;
+    max-height: fit-content;
+    background: #fff;
+}
+
+.box{
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .logo:hover {
+    filter: brightness(0);
+  }

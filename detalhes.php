@@ -69,13 +69,13 @@
                             <span class="d-block">Em até 12x sem Juros</span>
                         </strong>
                         
-                        <form action="index.php?id=<?php echo $exibeDetalhes['id_prod']; ?>">
+                        <form action="index.php?id=<?php echo $exibeDetalhes['id_prod'];?>">
                             <div class="form-group">
                                 <label for="produtos-quantidade-itens">Quantidade no estoque</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
                                     <?php  if($exibeDetalhes['quant_prod'] > 0) {
                                     for($x = 1; $x<=$exibeDetalhes['quant_prod']; $x++) {?>;
-                                        <option><?php echo $n++;?></option>
+                                        <option value=<?php echo $x;?> ><?php echo $x;?></option>
                                     <?php } } else { ?>;
                                         <option><?php echo 0?></option>
                                         <?php } ?>

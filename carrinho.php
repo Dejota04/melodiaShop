@@ -33,7 +33,7 @@
     $idCli = $_SESSION['ID'] ;
     $consultaCli = $cn->query("select nome_cli from cliente where id_cli = '$idCli'");
     $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
-    $valorTotal = $cn->query("select Sum(valor) as valor from produto where cart_prod = 1");
+    $valorTotal = $cn->query("select Sum(valor * quant_prod) as valor from produto where cart_prod = 1");
     $exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
 
 
@@ -106,8 +106,9 @@
 <div class="row align-items-center" style="margin-top: 30px;  margin-left: 200px;">
     
     <div class="col-sm-2 col-md-offset-3"><img src="./assets/images/<?php echo $exibe['img_prod'];?>" class="img-fluid"></div>
-    <div class="col-sm-4"><b><?php echo $exibe['nome_prod']; ?></b></div>
+    <div class="col-sm-2"><b><?php echo $exibe['nome_prod']; ?></b></div>
     <div class="col-sm-2"><b >R$ <?php echo $exibe['valor']; ?></b></div>
+    <div class="col-sm-2"><b > <?php echo $exibe['quant_prod']; ?></b></div>
     <div class="col-sm-2 col-xs-offset-right-1">
     
 
@@ -126,7 +127,7 @@
 
 <?php  } ?>
 
-    <div class="total">
+    <div class="total text-center">
         <div class="total-title">Total</div>
         <div class="total-price">R$<?php echo $exibeTotal['valor'];?></div>
     </div>

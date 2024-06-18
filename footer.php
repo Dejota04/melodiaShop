@@ -43,7 +43,7 @@
                             <a href="#">Rastrear meu Pedido</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Troca e Devoluções</a>
+                            <a href="troca.php">Troca e Devoluções</a>
                         </li>
                     </ul>
                 </article>
@@ -56,10 +56,10 @@
                     </h4>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="#">Sobre a Loja</a>
+                            <a href="historia.php">Sobre a Loja</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Politica e Privacidade</a>
+                            <a href="Politica.php">Politica e Privacidade</a>
                         </li>
                     </ul>
                 </article>
