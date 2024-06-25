@@ -11,10 +11,10 @@
                     </h4>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="#">(11) 9 9999-9999</a>
+                            <a href="#">(11) 94908-1179</a>
                         </li>
                         <li class="nav-item">
-                            <a href="mailto:contato@loja.com.br">contato@loja.com.br</a>
+                            <a href="mailto:contato@loja.com.br">MelodiaShop@gmail.com.br</a>
                         </li>
                         <li class="nav-item">
                             Horario de Atendimento on-line: Segunda à sexta da 9:00 as 19:00

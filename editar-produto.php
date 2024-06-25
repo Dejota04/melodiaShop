@@ -28,7 +28,7 @@ $('#preco').mask('000.000.000.000.000,00', {reverse: true});
     error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 	
-	session_start();	
+		
 	
 	session_start();
 	if(empty($_SESSION['ID']))
@@ -74,7 +74,7 @@ $('#preco').mask('000.000.000.000.000,00', {reverse: true});
 					  <option value="Saxofone">Saxofone</option>					
 					</select>
 
-            <input type="text" name="txtpreco"  placeholder="Preço" value="<?php echo $exibe['valor']; ?>"required id="preco"/>
+            <input type="text" name="txtpreco"  placeholder="Preço" value="<?php echo $exibe['valor']; ?>" required id="preco"/>
 
             <input type="number" name="txtqtd"  placeholder="Quantidade..." value="<?php echo $exibe['quant_prod']; ?>" required id="txtqtd"/>
 

@@ -547,6 +547,7 @@ blockquote {
 b,
 strong {
   font-weight: bolder;
+  color: #000;
 }
 
 small {
@@ -10447,6 +10448,16 @@ h1, h2, h3, h4, h5 {
   background-color: #d1d1d1;
   border-radius: 10px;
   padding: 25px;
+}
+
+.compras {
+  background-color: #d1d1d1;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.conta {
+  color: #000;
 }
 
 #botaoCarrinho{

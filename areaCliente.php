@@ -29,10 +29,13 @@
 		
 	}
 
+    $cd_cliente = $_SESSION['ID'];
     $consultaCart = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where cart_prod= 1 ");
     $idCli = $_SESSION['ID'] ;
     $consultaCli = $cn->query("select nome_cli, email_cli, tel_cli from cliente where id_cli = '$idCli'");
     $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
+    $consultaVenda = $cn->query("select * from vw_venda where id_cli = $cd_cliente;");
+    
    
 
 
@@ -191,13 +194,13 @@
                 <!-- Lista de intens -->
 
 
-                <section class="container produtos">
-                    <h2 class="text-center"><b>Minha conta</b></h2><br><br> 
+                <section class="container">
+                    <h2 class="text-center conta"><b>Minha conta</b></h2><br><br> 
                     <h4><b>Dados</b></h4><hr>
-                        <article class="dados">
+                        <article class="dados conta">
                             <nav class="row d-flex justify-content-between">
-                                <p class="col-md-2  d-flex "><b>Dados Pessoais</b></p>
-                                <a class="col-md-2  d-flex " href="#"><p><b>Editar</b></p></a>
+                                <p class="col-md-2  d-flex conta"><b>Dados Pessoais</b></p>
+                                <a class="col-md-2  d-flex conta" href="editar-cliente.php"><p><b>Alterar</b></p></a>
                             </nav>
                             <hr>
 
@@ -217,19 +220,31 @@
         
         <section class="container produtos">
                     <h4><b>Compras realizadas</b></h4><hr>
-        </section>
-
-	<div class="row" style="margin-top: 15px;">
+        
+        <article class="compras">
+	<div class="text-center row d-flex justify-content-between" style="margin-top: 15px;">
 		
-		<div class="col-sm-1 col-sm-offset-1"> Data </div>
-		<div class="col-sm-2"> Ticket </div>
-		<div class="col-sm-5"> Produto </div>
-		<div class="col-sm-1"> Quantidade </div>
-		<div class="col-sm-2"> Preço </div>
+		<div class="col-sm-2 col-md-offset-3"> <b>Data</b> </div>
+		<div class="col-sm-2"> <b>Ticket</b> </div>
+		<div class="col-sm-2"> <b>Produto</b> </div>
+		<div class="col-sm-2"> <b>Quantidade</b> </div>
+		<div class="col-sm-2"> <b>Preço</b> </div>
 				
 	</div>		
-	
-	
+
+    <?php while($exibeVen = $consultaVenda->fetch(PDO::FETCH_ASSOC)){?>
+    <div class="text-center row d-flex justify-content-between" style="margin-top: 15px;">
+		
+		<div class="col-sm-2 col-md-offset-3"> <?php echo date('d/m/Y', strtotime($exibeVen['dt_venda']))?> </div>
+		<div class="col-sm-2"> <?php echo $exibeVen['no_ticket']?> </div>
+		<div class="col-sm-2"> <?php echo $exibeVen['nome_prod']?> </div>
+		<div class="col-sm-2"> <?php echo $exibeVen['qt_prod']?> </div>
+		<div class="col-sm-2"> R$<?php echo number_format ($exibeVen['valor_venda'], 2, ',','.')?> </div>
+				
+	</div>		
+	<?php } ?>
+    </article>
+	</section>
 </div>
 
 	<!-- Footer -->
