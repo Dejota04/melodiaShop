@@ -51,7 +51,8 @@ id_cli int,
   constraint foreign key (id_cli) references cliente(id_cli)
 );
 
-
+select * from produto;
+update produto set cart_prod = 1, quant_prod = 2 where id_prod = 1;
 
 -- tabela pagamento que tem funcionario como chave estrangeira 
 create table pagamento(
@@ -88,6 +89,7 @@ values(111222333, 2, 2, 2, 52.20, '2024-10-02');
 
 select * from venda;
 
+create view vw_venda as
 select 
 		venda.no_ticket,
         venda.id_cli,
@@ -97,6 +99,9 @@ select
         produto.nome_prod
 from venda inner join produto 
 on venda.id_prod = produto.id_prod;
+
+select * from vw_venda;
+select * from vw_venda where id_cli = 2;
 
 -- comissão é o relacionamento entre o fornecedor e o produto e tem como chave estrangeira o produto e o fornecedor  
 create table comissao(
