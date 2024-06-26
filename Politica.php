@@ -75,7 +75,7 @@
 
     <footer class="nav-item">
         <ul>
-            <li><a href="index.php"> <img src="assets/images/clava1.png" class="fim" alt="logo parcial"></a></li>
+            <li><a href="index.php"> <img class= "img-fluid logo" src="assets/images/clava1.png" class="fim" alt="logo parcial"></a></li>
             
             <li><a href="Politica.php">voltar ao início</a></li>
 

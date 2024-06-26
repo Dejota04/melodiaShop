@@ -402,7 +402,7 @@
 
              <!-- Pianos -->
              <?php if($consultaT-> rowCount() >= 1) { ?>
-             <h1 class="text-center" id="piano">Teclado</h1>
+             <h1 class="text-center" id="piano">Teclados</h1>
             <!-- Listagem dos Produtos -->
             <article class="row">
             <?php  while($exibe = $consultaT->fetch(PDO::FETCH_ASSOC)){ ?>

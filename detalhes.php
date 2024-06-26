@@ -35,8 +35,8 @@
                 <section class="col-md-5 mb-5 d-flex flex-column justify-content-around">
                     <article class="produtos-conteudo">
                         <h1 class="product-title"><?php echo $exibeDetalhes['nome_prod'];?></h1>
-                        <p><?php echo $exibeDetalhes['desc_prod'];?>
-                        </p>
+                        <p><?php echo $exibeDetalhes['desc_prod'];?></p>
+                        
                     </article>
 
 

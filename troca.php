@@ -69,7 +69,7 @@
 
     <footer class="nav-item">
         <ul>
-            <li><a href="index.php"> <img src="assets/images/clava1.png" alt="logo parcial"></a></li>
+            <li><a href="index.php"> <img class= "img-fluid logo" src="assets/images/clava1.png" alt="logo parcial"></a></li>
             
             <li><a href="troca.php">voltar ao início</a></li>
 

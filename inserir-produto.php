@@ -70,8 +70,7 @@ if(empty($_SESSION['ID']))
 }
 
 if(isset($_POST['submit'])){
-    ini_set('display_errors', 0);
-    error_reporting(E_ERROR | E_WARNING | E_PARSE);    
+      
 include 'conexao.php'; 
 include 'resize-class.php';
 

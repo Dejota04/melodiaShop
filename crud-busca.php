@@ -49,7 +49,7 @@ $pesquisa = $_GET['txtbusca'];
         <thead class="prod-trbd">
           <tr>
             <th><div><img src="./assets/images/<?php echo $exibe['img_prod'];?>" class="img-fluid"></div></th>
-            <th></th>
+           
             <th><div><h4><?php echo $exibe['nome_prod']; ?></h4></div></th>
             <th><div><h4 >R$ <?php echo $exibe['valor']; ?></h4></div></th>
             <th><a href="editar-produto.php?id=<?php echo $exibe['id_prod']; ?>">

@@ -17,8 +17,7 @@
 <body>	
 	
 	<?php
-    ini_set('display_errors', 0);
-    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+   
     include 'conexao.php';
     session_start(); // iniciando sessão
 	
@@ -29,12 +28,17 @@
 		
 	}
 
+
+    $ticket= $_GET['ticket'];
     $cd_cliente = $_SESSION['ID'];
     $consultaCart = $cn->query("select id_prod, img_prod, nome_prod, quant_prod, desc_prod, valor from produto where cart_prod= 1 ");
     $idCli = $_SESSION['ID'] ;
     $consultaCli = $cn->query("select nome_cli, email_cli, tel_cli from cliente where id_cli = '$idCli'");
     $exibeCli = $consultaCli->fetch(PDO::FETCH_ASSOC);
-    $consultaVenda = $cn->query("select * from vw_venda where id_cli = $cd_cliente group by no_ticket order by dt_venda desc;");
+    $consultaVenda = $cn->query("select * from vw_venda where no_ticket = '$ticket' order by dt_venda desc;");
+    $valorTotal = $cn->query("select Sum(valor_venda) as valor from vw_venda where no_ticket ='$ticket'");
+    $exibeTotal = $valorTotal->fetch(PDO::FETCH_ASSOC);
+
     
    
 
@@ -222,23 +226,37 @@
                     <h4><b>Compras realizadas</b></h4><hr>
         
         <article class="compras">
-	<div class="text-center row d-flex justify-content-center" style="margin-top: 15px;">
+	<div class="text-center row d-flex justify-content-between" style="margin-top: 15px;">
 		
 		<div class="col-sm-2 col-md-offset-3"> <b>Data</b> </div>
 		<div class="col-sm-2"> <b>Ticket</b> </div>
-		
+		<div class="col-sm-2"> <b>Produto</b> </div>
+		<div class="col-sm-2"> <b>Quantidade</b> </div>
+		<div class="col-sm-2"> <b>Preço</b> </div>
 				
 	</div>		
 
     <?php while($exibeVen = $consultaVenda->fetch(PDO::FETCH_ASSOC)){?>
-    <div class="text-center row d-flex justify-content-center" style="margin-top: 15px;">
+    <div class="text-center row d-flex justify-content-between" style="margin-top: 15px;">
 		
 		<div class="col-sm-2 col-md-offset-3"> <?php echo date('d/m/Y', strtotime($exibeVen['dt_venda']))?></div>
-		<div class="col-sm-2"><a href="ticket.php?ticket=<?php echo $exibeVen['no_ticket']?>"> <?php echo $exibeVen['no_ticket']?> </div></a>
-		
+		<div class="col-sm-2" href=""> <?php echo $exibeVen['no_ticket']?> </div>
+		<div class="col-sm-2"> <?php echo $exibeVen['nome_prod']?> </div>
+		<div class="col-sm-2"> <?php echo $exibeVen['qt_prod']?> </div>
+		<div class="col-sm-2"> R$<?php echo number_format ($exibeVen['valor_venda'], 2, ',','.')?> </div>
+        
+
 				
 	</div>		
 	<?php } ?>
+    <hr>
+        <div class="text-center row d-flex justify-content-center">
+            <div class="col-sm-2"> <b>Total:</b> R$<?php echo number_format ($exibeTotal['valor'], 2, ',','.')?> </div>
+        </div>
+    <br>
+        <div class="text-center row d-flex justify-content-center">
+            <div class="col-sm-2"> <a href="areaCliente.php"<b>Voltar</b></a> 
+        </div>
     </article>
 	</section>
 </div>
